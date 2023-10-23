@@ -3,6 +3,7 @@ VENV := venv
 
 # default target, when make executed without arguments
 all: venv
+	black . 
 
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
@@ -18,7 +19,5 @@ clean:
 	rm -rf $(VENV)
 	find . -type f -name '*.pyc' -delete
 
-black:
-	black .
 	
 .PHONY: all venv run clean
