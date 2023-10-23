@@ -18,4 +18,7 @@ clean:
 	rm -rf $(VENV)
 	find . -type f -name '*.pyc' -delete
 
+black:
+	black .
+	
 .PHONY: all venv run clean
