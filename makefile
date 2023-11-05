@@ -1,5 +1,5 @@
 # default target, when make executed without arguments
-all: venv
+all: 
 	clean create venv run  
 
 create:
@@ -13,4 +13,4 @@ run: venv
 	test.py
 
 clean:
-	rm -f env
+	rm -f env || true
