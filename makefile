@@ -12,4 +12,4 @@ run: venv
 	python test.py
 
 clean:
-	rm -rf env || true
+	if [ -d env ]; then rm -rf env; fi
